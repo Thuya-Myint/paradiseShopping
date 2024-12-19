@@ -15,7 +15,7 @@ const Carts = () => {
             item.plantId === index + 1 && item.quantity > 0 ? { ...item, quantity: item.quantity - 1 } : item
          ))
       } else {
-         setcartItems(cartItems.filter((item, i) => i !== index))
+         setcartItems(cartItems.filter((item) => item.plantId !== index + 1))
       }
    }
    return (
